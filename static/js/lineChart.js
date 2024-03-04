@@ -3,7 +3,7 @@
 */
 
 async function getData(){
-    const response = await fetch('../data/data.csv'); //.. moves up one folder
+    const response = await fetch('static/data/data.csv'); //.. moves up one folder
     const data = await response.text(); //csv is in text format
     // console.log(data);
 
