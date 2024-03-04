@@ -1,0 +1,120 @@
+/* ----------------- Class -----------------*/
+.about {
+    width: 400px;
+    margin: auto;
+}
+
+.about-team{
+    color: #e811a0
+}
+
+.authors {
+    background-color: rgb(243, 253, 232);
+}
+
+.nb-background-color {   /* navbar background color*/
+    background-color: rgb(168, 223, 142);
+}
+
+
+.nbMenuItem {   /* navbar text properties*/
+    font-size: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.footer {
+    background-color: rgb(252, 160, 160); /*footer background color*/
+}
+
+.howTo {
+    font-size: 20px;
+}
+
+.icon-white {
+    color: #FFFFFF;
+}
+
+.overview {
+    background-color: rgb(255, 229, 229);
+}
+
+.ovPadLeft {
+    padding-left: 20px;
+}
+
+.ovPadRight {
+    padding-right: 20px;
+}
+
+.procedure {
+    background-color: rgb(243, 253, 232);
+    padding: 1px;
+}
+
+.showcase {
+    background-color: rgb(243, 253, 232);
+}
+
+.display-4 {
+    color: #e811a0
+}
+
+.display-8 {
+    color: #f57fce
+}
+
+.procedure-text {
+    color: #e811a0
+}
+
+.procedure-subtext {
+    color: #f57fce;
+}
+
+.card-body {
+    background-color: rgb(255, 229, 229);
+}
+
+.indheader {
+    font-family: "Lucinda Console", monospace;
+}
+
+.tabheader {
+    font-family: "Lucinda Console", monospace;
+}
+
+.tabsubheader {
+    font-family: "Lucinda Console", monospace;
+}
+
+.nav-link {
+    color: #e811a0;
+}
+/* ----------------- ID -----------------*/
+
+
+/* ----------------- Underline Animation CSS -----------------*/
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    /*color: #0087ca;*/
+  }
+  
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #eae6e6;
+    /*transform-origin: bottom right;*/
+    transition: transform 0.35s ease-out;
+}
+  
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    /*transform-origin: bottom left;*/
+}

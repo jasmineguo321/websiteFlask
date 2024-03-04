@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Merger Research</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+        crossorigin="anonymous">defer</script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark nb-background-color">
+    <!-- lg = large breakpoint, navbar-light = make text dark, headerBG = custom bss BG color -->
+        <div class="container">
+            <a href="#" class="navbar-brand">
+                <img src="{{url_for('static', filename='/img/firee.png')}}" alt="Fire Logo" class="d-inline-block align-text-top w-25">
+            </a>
+
+            <!-- Hamburger Menu Button-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible navbar menu with custom hover underline CSS animation-->
+            <div class="collapse navbar-collapse" id="navmenu">
+                <!-- Links to hamburger menu button-->
+                <ul class="navbar-nav ms-auto">        <!-- ms-auto is margin spacing-->
+                    <li class="nav-item">
+                        <a href="{{url_for('authors')}}" class="nav-link hover-underline-animation nbMenuTiem">Authors</a>                        
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url_for('procedure')}}" class="nav-link hover-underline-animation nbMenuTiem">Procedure</a>                        
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url_for('results')}}" class="nav-link hover-underline-animation nbMenuTiem">Result</a>                       
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Showcase -->
+    <section class="showcase text-light p-2 text-center"> 
+        <!--headerBG = custom css BG color, p-2 = padding 2-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 p-0 d-flex align-items-center">
+                    <!--img-fluid = won't expand larger than container and will scale down-->
+                    <img src="{{url_for('static', filename='/img/galaxygeneric.png')}}" alt="Galaxy Merger" class="img-fluid" width="700px" height="600px">
+                </div>
+                <div class="col-sm-6 p-0 d-flex align-items-center">
+                   <div class="container">
+                        <h1 class="display-4"> Identifying Galaxy Mergers With Self-Supervised Deep Learning </h1>
+                        <h2 class="display-8">J. Guo, D. Ellsworth</h2>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="overview text-dark p-2 text-left">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 p-3">
+                    <!-- pt-3 = padding top-->
+                    <img src="{{url_for('static', filename='/img/cnn.png')}}" style="height: 90%" alt="Galaxy Mergers" class="img-fluid">
+                </div>
+                <div class="col-sm-8 p-3">
+                    <h1 class="ovPadLeft indheader"> Background </h1> <!-- Custom padding left side -->
+                    <p class="lead overview ovPadLeft"> 
+                        With each passing day, telescopes around and above the Earth capture more and more images of 
+                        distant galaxies, and the datasets begin to explode in size. 
+                       
+                        <ul> 
+                            <li> A galaxy merger in the universe occurs when two or more galaxies 
+                                collide with combined mass and material, playing an important
+                                role in the formation and evolution of galaxies. </li>
+                        </ul>
+                    </p>
+                    <p class="lead overview ovPadLeft"> 
+                        Self-supervised deep learning is proposed to sort and identify galaxy merger images
+                        from a large, unsorted dataset.
+
+                        <ul> 
+                            <li> SSDL is based on CNN (convolutional neural networks), which
+                                takes an image (x) as an input, and produces a lower dimensional 
+                                representation (z). </li>
+                            <li> A CNN learns to make meaningful representations by associating 
+                                augmented views of the same image as similar, allowing it to correctly 
+                                identify image inputs. </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8 p-3">
+                    <h1 class="ovPadLeft indheader"> Rationale </h1> <!-- Custom padding left side -->
+                    <p class="lead overview ovPadLeft"> 
+                        Galaxy mergers play an important role in the formation
+                        and evolution of galaxies. They can trigger the formation of new stars, and
+                        studying galaxy mergers is important to understand the evolution of the universe as
+                        a whole. <br>With billions of galaxy images captured by telescopes, identifying galaxy
+                        mergers becomes the first challenging task to facilitate the future research on galaxy
+                        mergers. <br> 
+                        <ul> 
+                            <li>In the past, the only way to identify these mergers is with human vision;
+                            however, as the datasets begin to grow, this feat proves ineffecient and impossible.</li> 
+                            <li> In recent years, machine learning has proven particularly powerful for image sorting tasks,
+                            and they can handle large datasets quickly and accurately.</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="col-sm-4 p-3">
+                    <!-- pt-3 = padding top-->
+                    <img src="{{url_for('static', filename='/img/simsearch.png')}}" alt="Galaxy Merger CNN Model" class="img-fluid">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 p-3">
+                    <!-- pt-3 = padding top-->
+                    <img src="{{url_for('static', filename='/img/data.png')}}" width="350px" height="300px" alt="Data of Mergers" class="img-fluid">
+                </div>
+                <div class="col-sm-8 p-3">
+                    <h1 class="ovPadLeft indheader"> Research Practicum </h1> <!-- Custom padding left side -->
+                    <p class="lead overview ovPadLeft"> 
+                        <strong> Hypothesis: </strong> In order to discover the characteristics of galaxy 
+                        mergers, a self-supervised deep learning method is proposed to train a model with
+                        existing images of galaxy mergers, and the learned model can be further utilized to extract 
+                        feature representations from any galaxy image.                                           
+                    </p>
+                    <p class="lead overview ovPadLeft">
+                        <strong>Independent Variable: </strong>  If the galaxy images were compared in high-dimensional
+                        space without a CNN or in low-dimensional space after running through the trained CNN.
+                    </p>
+                    <p class="lead overview ovPadLeft">
+                        <strong>Dependent Variable: </strong> Precision and recall of correctly identified galaxy mergers.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (requires Bootstrap icons)-->
+    <footer class="p-5 footer text-light text-center position-relative">
+        <div class="container">
+            <p class="lead">Copyright &copy; SE 2023 Bootstrap Demo</p>
+            <a href="#" class="position-absolute bottom-0 end-0 p-5">
+                <i class="bi bi-arrow-up-circle h2 icon-white"></i>
+            </a>
+        </div>
+    </footer>
+<!-- Code injected by live-server -->
+</body>
+</html>
